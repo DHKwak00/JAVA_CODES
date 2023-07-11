@@ -19,6 +19,8 @@ public class Ifmain03 {
 			System.out.println("0");
 		}else {
 			System.out.println("음수");
+			
+			
 		}
 		
 		
