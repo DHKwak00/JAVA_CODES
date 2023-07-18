@@ -39,7 +39,7 @@ public class TypeCastingMain {
 		
 		char ch1 = 'A';
 		System.out.println("ch1 = " + ch1); // 문자 자체를 출력
-		System.out.println("ch1 = " + (int) ch1); // 문자 유닠드값 출력
+		System.out.println("ch1 = " + (int) ch1); // 문자 유니코드값 출력
 		
 		
 		// ch1을 사용하여 'B'라는 문자를 출력하세요

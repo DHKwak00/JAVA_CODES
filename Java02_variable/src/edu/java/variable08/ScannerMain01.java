@@ -14,7 +14,7 @@ public class ScannerMain01 {
 		System.out.println("국어 점수 : " + kor);
 		
 		// nextInt() : 정수를 입력받는 메소드
-		// nsetDouble() : 실수를 입력받는 메소드
+		// nextDouble() : 실수를 입력받는 메소드
 		// nextLine() : 문자열 한 줄을 입력받는 메소드
 		// next() : 문자열 한 줄을 입력받는 메소드. 엔터 버퍼를 처리
 		

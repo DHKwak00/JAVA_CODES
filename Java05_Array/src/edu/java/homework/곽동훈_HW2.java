@@ -67,7 +67,8 @@ public class 곽동훈_HW2 {
 					max1 = array[i][j];
 				}
 			}
-			num += array[i].length;
+			num += array[i].length; // Integer.Max 이용해보기
+			
 		}
 		avg1 = sum1 / num;
 		
