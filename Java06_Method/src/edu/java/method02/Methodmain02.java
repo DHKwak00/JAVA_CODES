@@ -7,7 +7,7 @@ public class Methodmain02 {
 	// 리턴타입 : int
 	// 매개변수 : int x, int y 
 	public static int add(int x, int y) {
-		int result = x + y;
+//		int result = x + y;
 		return x+y; // reasult;
 	} // end add()
 	
