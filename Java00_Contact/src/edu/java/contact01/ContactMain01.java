@@ -20,8 +20,8 @@ public class ContactMain01 {
 	public static void main(String[] args) {
 		
 		String name;
-		String phone;
-		String email;
+		String phone; // 그릇의 역할은 한번 쓰고 땡 느낌으로
+		String email; // 지역 변수를 써야하는 이유 *************** 오답노트 적기
 		Contact contact = new Contact();
 		// 등록할 때 마다 객체를 초기화 (새로)
 		while(true) {
@@ -50,7 +50,7 @@ public class ContactMain01 {
 				contactList[count] = contact;
 				count++;
 				
-					System.out.println(contact.toString());
+				System.out.println(contact.toString());
 				continue; // end MENU_INSERT
 				
 			case MENU_SEARCH_ALL:

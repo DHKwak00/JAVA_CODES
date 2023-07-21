@@ -68,7 +68,7 @@ public class AccessMain08 {
 		x = 123;
 //		y = 100; // final 변수는 처음 초기화된 값을 변경할 수 없음
 		
-
+		sc.close();
 	} // end main()
 
 } // AccessNaib08

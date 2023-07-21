@@ -14,7 +14,8 @@ public class AccessMain02 {
 //		t1.n2 = 200; // (package) : 다른 패키지에 있으므로 접근 불가
 //		t1.n3 = 300; // protected : 다른 패키지고, 상속 받지 않았으므로 접근 불가
 		t1.n4 = 400; // public : 어디서든 접근 가능
-
+		
+		sc.close();
 	} // end main()
 
 } // end AccessMain02
