@@ -5,11 +5,10 @@ public class HybridCar extends Car{
 	private int battery;
 
 	public HybridCar() {
-		super();
+
 	}
 
 	public HybridCar(int battery) {
-		super();
 		this.battery = battery;
 	}
 
@@ -32,5 +31,8 @@ public class HybridCar extends Car{
 		System.out.println("하이브리드 자동차 배터리 : " + battery);
 	}
 	
-
+	
 }
+
+
+

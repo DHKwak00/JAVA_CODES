@@ -12,21 +12,28 @@ public class IfMain06 {
 		int num = sc.nextInt();
 		
 		sc.close();
-
+		
 		// 입력된 num 값이 짝수인 경우 "짝수" 출력
-		// 입력된 num 값이 홀수인 경우 "홀수" 출력
-		// 입력된 num 값이 짝수이면서, 4의 배수이면 "4"의 배수 출력, 4의 배수가 아니면 "4의 배수가 아닌 짝수 출력"
+		// 	   ""       홀수인 경우 "홀수" 출력
+		// 입력된 num 값이 짝수이면서, 4의 배수이면 "4"의 배수 출력
+		//     ""                 4의 배수가 아니면 "4의 배수가 아닌 짝수 출력"
 		
 		if(num % 2 == 0) { // 짝수일 때
 			System.out.println("짝수");
-			if(num % 4 == 0) { // 4의 배수일때
+			if(num % 4 == 0) { // 4의 배수일 때
 				System.out.println("4의 배수");
-			}else { // 4의 배수가 아닐 때
+			} else { // 4의 배수가 아닐 때
 				System.out.println("4의 배수가 아닌 짝수 출력");
 			}
-		}else { // 홀수일 때
+		} else { // 홀수일 때
 			System.out.println("홀수");
 		}
-	}
+		
 
-}
+	} // end main()
+
+} // end IfMain06
+
+
+
+

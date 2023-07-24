@@ -4,25 +4,34 @@ public class ForMain02 {
 
 	public static void main(String[] args) {
 		// println() : 맨 마지막 줄바꿈(\n)이 포함된 출력 메소드
-		// print() : 문자열을s 나열하여 출력하는 메소드
+		// print() : 문자열을 나열하여 출력하는 메소드
 		
 		// 0 2 4 6 8 10
-		for(int i=0; i<=10; i+=2) {
-			System.out.print(i + " ");
+		for(int x = 0; x <= 10; x += 2) {
+			System.out.print(x + " ");
 		}
+		
 		System.out.println();
 		
 		// 2*0 2*1 2*2 2*3 2*4 2*5
-		// 2*(0 1 2 3 4 5)
-		for(int i=0; i<=5; i++) {
-			System.out.print(2 * i + " ");
+		// 2* (0 1 2 3 4 5 )
+		for(int x = 0; x <= 5; x++) {
+			System.out.print(2 * x + " ");
 		}
 		
-		for(int i=0; i<=10; i++) {
-			if(i % 2 ==0) {
-				System.out.println(i + " ");
+		System.out.println();
+		
+		for(int x = 0; x <= 10; x++) {
+			if(x % 2 == 0) {
+				System.out.print(x + " ");				
 			}
 		}
-	}
 
-}
+	} // end main()
+
+} // end ForMain02
+
+
+
+
+

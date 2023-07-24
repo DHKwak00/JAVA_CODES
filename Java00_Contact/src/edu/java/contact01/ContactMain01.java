@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class ContactMain01 {
 	public static final int MENU_QUIT = 0; // 종료
 	public static final int MENU_INSERT = 1; // 등록
-	public static final int MENU_SEARCH_ALL = 2; // 전체검색
-	public static final int MENU_SEARCH_DETAIL = 3; // 상세검색
-	public static final int MENU_MODIFY = 4; // 수정
+	public static final int MENU_SELECT_ALL = 2; // 전체 검색
+	public static final int MENU_SELECT = 3; // 상세 검색
+	public static final int MENU_UPDATE = 4; // 수정
 	
 	public static final int MAX = 100; // 연락처 최대 저장 개수
 	
@@ -18,94 +18,126 @@ public class ContactMain01 {
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		System.out.println("연락처 프로그램 version 0.1");
 		
-		String name;
-		String phone; // 그릇의 역할은 한번 쓰고 땡 느낌으로
-		String email; // 지역 변수를 써야하는 이유 *************** 오답노트 적기
-		Contact contact = new Contact();
-		// 등록할 때 마다 객체를 초기화 (새로)
-		while(true) {
-			System.out.println("--------------------------------------------");
-			System.out.println("1.등록 | 2.전체검색 | 3.상세검색 | 4.수정 | 0.종료");
-			System.out.println("--------------------------------------------");
-			System.out.println("선택>");
-			int select = sc.nextInt();
+		boolean run = true; // 반복문 종료용
+		
+		while(run) {
+			showMainMenu();
+			int choice = sc.nextInt(); // 메뉴 선택 저장
 			
-			switch(select) {
+			switch (choice) {
 			case MENU_INSERT:
-				System.out.println("등록");
-				System.out.println("-------------------------------------------");
-				System.out.println("이름>");
-				name = sc.next();
-				System.out.println("전화번호>");
-				phone = sc.next();
-				System.out.println("이메일>");
-				email = sc.next();
-				
-				contact.setNo(count);
-				contact.setName(name);
-				contact.setPhone(phone);
-				contact.setEmail(email);
-				
-				contactList[count] = contact;
-				count++;
-				
-				System.out.println(contact.toString());
-				continue; // end MENU_INSERT
-				
-			case MENU_SEARCH_ALL:
-				for(Contact c: contactList) {
-					System.out.println(c.toString());
-				}
+				insertContact();
 				break;
-			case MENU_SEARCH_DETAIL:
-				System.out.println("--------------------------------------------");
-				System.out.println("3. 상세 검색");
-				System.out.println("--------------------------------------------");
-				System.out.println("인덱스>");
-				int no = sc.nextInt();
-				if(no == contact.getNo()) {
-					System.out.println("이름 : " + contact.getName());
-					System.out.println("전화번호 : " + contact.getPhone());
-					System.out.println("이메일 : " + contact.getEmail());
-				}
+			case MENU_SELECT_ALL:
+				selectAllContact();
 				break;
-			case MENU_MODIFY:
+			case MENU_SELECT:
+				selectContact();
+				break;
+			case MENU_UPDATE:
+				updateContact();
 				break;
 			case MENU_QUIT:
+				run = false;
+				System.out.println("프로그램이 종료되었습니다.");
 				break;
-				
-				
-			} // end switch
-		} // end while
-		
+
+			default:
+				System.out.println("잘못된 번호 선택입니다. 0 ~ 4까지 선택해주세요.");
+				break;
+			}
+		} // end while()
 
 	} // end main()
+
+	private static void showMainMenu() {
+		System.out.println("-------------------------------------------------");
+		System.out.println("1. 등록 | 2. 전체검색 | 3. 상세검색 | 4. 수정 | 0. 종료");
+		System.out.println("-------------------------------------------------");
+		System.out.println("선택>");
+	} // end showMainMenu()
+
+	// contactList 배열에 contact 인스턴스를 저장
+	private static void insertContact() {
+		System.out.println("-------------");
+		System.out.println("연락처 등록 메뉴");
+		System.out.println("-------------");
+		System.out.println("이름 입력>");
+		String name = sc.next();
+		System.out.println("전화번호 입력>");
+		String phone = sc.next();
+		System.out.println("이메일 입력>");
+		String email = sc.next();
+		
+		Contact c = new Contact(name, phone, email);
+		
+		// 배열에 저장(인덱스 0부터 순서대로)
+		contactList[count] = c; // count 번에 데이터 저장
+		count++; // 등록이 수행될 때마다 1씩 증가
+		System.out.println("연락처 등록 완료!");
+		System.out.println("등록된 연락처 개수 : " + count);
+		
+	} // end insertContact()
 	
-//	public void save() {
-//		String name;
-//		String phone;
-//		String email;
-//		
-//		Contact contact = new Contact();
-//		
-//		System.out.println("등록");
-//		System.out.println("-------------------------------------------");
-//		System.out.println("이름>");
-//		name = sc.next();
-//		System.out.println("전화번호>");
-//		phone = sc.next();
-//		System.out.println("이메일>");
-//		email = sc.next();
-//		
-//		contact.setName(name);
-//		contact.setPhone(phone);
-//		contact.setEmail(email);
-//
-//		contactList[count] = contact;
-//		count++;
-//			System.out.println(contact.toString());
-//	}
+	// 배열에 저장된 contact 데이터를 출력
+	private static void selectAllContact() {
+		System.out.println("연락처 개수 : " + count);
+		for(int i = 0; i < count; i++) {
+			System.out.println("--- 연락처 " + i + " ---");
+			System.out.println(contactList[i]);
+		}
+		
+	} // end selectAllContact()
 
+	private static void selectContact() {
+		System.out.println("---------------");
+		System.out.println("검색할 인덱스 입력>");
+		int index = sc.nextInt();
+		
+		if(index >= 0 && index < count) {
+			System.out.println(contactList[index].toString());
+		} else {
+			System.out.println("해당 인덱스에 연락처가 없습니다.");
+		}
+		
+	} // end selectContact()
+	
+	private static void updateContact() {
+		System.out.println("----------------");
+		System.out.println("수정할 인덱스 입력>");
+		int index = sc.nextInt();
+		
+		if(index >= 0 && index < count) {
+			System.out.println("이름 입력>");
+			String name = sc.next();
+			System.out.println("전화번호 입력>");
+			String phone = sc.next();
+			System.out.println("이메일 입력>");
+			String email = sc.next();
 
+			
+			contactList[index].setName(name);
+			contactList[index].setPhone(phone);
+			contactList[index].setEmail(email);
+			System.out.println("연락처 수정 완료!");
+		} else {
+			System.out.println("해당 인덱스에 연락처가 없습니다.");
+		}
+		
+	} // end updateContact()
+	
 } // end ContactMain01
+
+
+
+
+
+
+
+
+
+
+
+

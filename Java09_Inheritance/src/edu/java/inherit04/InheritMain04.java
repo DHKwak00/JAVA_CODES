@@ -17,10 +17,12 @@ public class InheritMain04 {
 		Animal[] a = new Animal[2];
 		a[0] = dog;
 		a[1] = cat;
-		for(int i=0; i<a.length; i++) {
+		for(int i = 0; i < a.length; i++) {
 			a[i].speak();
 		}
+		
+		
 
-	}
+	} // end main()
 
-}
+} // end InheritMain04

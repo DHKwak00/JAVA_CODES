@@ -9,9 +9,8 @@ public class AccessMain06 {
 		System.out.println(test1);
 		
 //		TestPackage test2 = new TestPackage();
-//		System.out.println(test2);
 		// 다른 패키지에 속한 클래스에서는 인스턴스 생성 불가능
 
-	} //end main()
+	} // end main()
 
 } // end AccessMain06

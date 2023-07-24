@@ -52,10 +52,6 @@ public class Contact {
 	public String toString() {
 		return "Contact [no=" + no + ", name=" + name + ", phone=" + phone + ", email=" + email + "]";
 	}
+
 	
-	
-	
-	
-	
-	
-} // end Contact
+}

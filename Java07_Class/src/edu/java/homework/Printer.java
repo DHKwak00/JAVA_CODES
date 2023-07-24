@@ -1,27 +1,21 @@
 package edu.java.homework;
 
 public class Printer {
-	
-//	int i;
-//	boolean j;
-//	double k;
-//	String l;
-	
-	public Printer() {}
-	
-	public void println(int n) {
-		System.out.println(n);
+
+	public void println(int i) {
+		System.out.println(i);
 	}
 	
-	public void println(boolean n) {
-		System.out.println(n);
+	public void println(boolean i) {
+		System.out.println(i);
 	}
 	
-	public void println(double n) {
-		System.out.println(n);
+	public void println(double i) {
+		System.out.println(i);
 	}
 	
-	public void println(String n) {
-		System.out.println(n);
+	public void println(String i) {
+		System.out.println(i);
 	}
-} // end Printer
+
+}

@@ -13,7 +13,9 @@ public class Animal {
 	// 메소드
 	public void speak() {
 		System.out.println("동물이 말합니다.");
-		
 	} // end speak()
 	
 } // end Animal
+
+
+

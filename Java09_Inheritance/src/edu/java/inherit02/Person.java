@@ -8,11 +8,11 @@ public class Person {
 	public Person() {
 		System.out.println("Person 생성자");
 	}
-
-	// 매개변수가 있는 생성자
+	
+	// 매겨변수가 있는 생성자
 	public Person(String name) {
 		this.name = name;
-		System.out.println("Person(생성자) 닉네임");
+		System.out.println("Person(name) 생성자");
 	}
 
 	public String getName() {
@@ -23,5 +23,11 @@ public class Person {
 		this.name = name;
 	}
 	
-	
-}
+} // end Person
+
+
+
+
+
+
+

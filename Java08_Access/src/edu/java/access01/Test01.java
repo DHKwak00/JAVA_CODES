@@ -8,10 +8,17 @@ public class Test01 {
 	public int n4; // 어디서든지 사용
 	
 	// 메소드
-	public void printField() {
+	public void printFields() {
 		System.out.println("n1 = " + n1);
 		System.out.println("n2 = " + n2);
 		System.out.println("n3 = " + n3);
 		System.out.println("n4 = " + n4);
-	} // end printField()
+	} // end printFields()
 } // end Test01
+
+
+
+
+
+
+

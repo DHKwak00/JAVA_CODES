@@ -14,25 +14,29 @@ public class MethodMain04 {
 		inputScores(scores);
 		
 		printScores(scores);
-
+		
 	} // end main()
 
 	private static void printScores(int[] scores) {
-		System.out.println("주소값 : "+ scores);
+		System.out.println("주소값 : " + scores);
 		for(int x : scores) {
 			System.out.println("입력한 점수 : " + x);
 		}
-		
 	} // end printScores()
 
 	// 배열에 각 점수를 입력하는 기능
 	private static void inputScores(int[] scores) {
 		Scanner sc = new Scanner(System.in);
-		for(int i=0; i<scores.length; i++) {
+		for(int i = 0; i < scores.length; i++) {
 			System.out.println("점수 : " + i + "번째 입력>");
 			scores[i] = sc.nextInt();
 		}
-		sc.close();
-	} //end inputScores()
+		sc.close();		
+	} // end inputScores()
 
 } // end MethodMain04
+
+
+
+
+

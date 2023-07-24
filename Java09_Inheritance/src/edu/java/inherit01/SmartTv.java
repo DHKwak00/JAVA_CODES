@@ -1,7 +1,6 @@
 package edu.java.inherit01;
 
 public class SmartTv extends BasicTv{
-
 	// 멤버 변수
 	private String ip;
 	
@@ -13,6 +12,11 @@ public class SmartTv extends BasicTv{
 	}
 	
 	public void setIp(String ip) {
-		this.ip=ip;
+		this.ip = ip;
 	}
+	
 } // end SmartTv
+
+
+
+

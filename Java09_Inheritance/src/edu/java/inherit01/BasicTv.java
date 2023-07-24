@@ -9,10 +9,11 @@ public class BasicTv {
 	// 생성자
 	public BasicTv() {}
 	
-	// 메서드
+	// 메소드
 	public void turnOnOff() {
 		System.out.println("turnOnOff() 메소드");
-		
 	}
+} // end BasicTv
 
-}
+
+

@@ -1,14 +1,13 @@
 package edu.java.access05;
 
-
 public class TestPublic {
 
 }
 
-class test2 {
+class Test2 {
 	
 }
 
-class test3 {
+class Test3 {
 	
 }

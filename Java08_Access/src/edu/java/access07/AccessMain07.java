@@ -14,7 +14,7 @@ public class AccessMain07 {
 		System.out.println(result);
 		System.out.println(result.getNumber());
 		
-		System.out.println("============");
+		System.out.println("===========");
 		MyNumber x = new MyNumber(1);
 		MyNumber y = new MyNumber(2);
 		MyNumber z = new MyNumber(3);
@@ -22,7 +22,13 @@ public class AccessMain07 {
 		
 		x.add(y).add(z).add(end);
 		System.out.println(x.getNumber());
+		
 
 	} // end main()
 
-} // end AccessMain07
+} // AccessMain07
+
+
+
+
+
