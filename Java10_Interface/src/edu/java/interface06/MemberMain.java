@@ -5,7 +5,9 @@ package edu.java.interface06;
 public class MemberMain {
 
 	public static void main(String[] args) {
-		
+		System.out.println();
+		System.out.println();
+		System.out.println();
 
 	} // end main()
 
