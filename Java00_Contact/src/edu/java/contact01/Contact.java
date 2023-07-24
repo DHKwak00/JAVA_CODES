@@ -12,7 +12,7 @@ public class Contact {
 	public Contact() {}
 
 	public Contact(String name, String phone, String email) {
-		this.no = no;
+		
 		this.name = name;
 		this.phone = phone;
 		this.email = email;

@@ -15,7 +15,7 @@ public class ContactMain0100 {
 	
 	public static final int MAX = 100; // 연락처 최대 저장 개수
 	
-	public static Contact[] contactList = new Contact[MAX];
+	public static Contact00[] contactList = new Contact00[MAX];
 	public static int count = 0;
 	
 	public static Scanner sc = new Scanner(System.in);
@@ -78,7 +78,7 @@ public class ContactMain0100 {
 		System.out.println("이메일 입력");
 		String email = sc.next();
 		
-		Contact c = new Contact(name, phone, email);
+		Contact00 c = new Contact00(name, phone, email);
 		
 		// 배열에 저장(인덱스 0부터 순서대로)
 		contactList[count] = c; // for문이 아니라 '호출 받을때 마다 증가한다' 로 생각해보기
@@ -119,9 +119,9 @@ public class ContactMain0100 {
 		if(index >= 0 && index < count) {
 			System.out.println("이름 입력>");
 			String name = sc.next();
-			System.out.println("이름 입력>");
+			System.out.println("번호 입력>");
 			String phone = sc.next();
-			System.out.println("이름 입력>");
+			System.out.println("이메일 입력>");
 			String email = sc.next();
 			
 			contactList[index].setName(name);
