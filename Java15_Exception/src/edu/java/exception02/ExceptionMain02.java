@@ -1,4 +1,4 @@
-package edu.java.exception01;
+package edu.java.exception02;
 
 import java.util.Scanner;
 
