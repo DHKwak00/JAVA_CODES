@@ -3,13 +3,11 @@ package edu.java.lambda02;
 @FunctionalInterface
 interface Test1{
 	public abstract void testPrint();
-	
 }
 
 @FunctionalInterface
 interface Test2{
-	public abstract int testPrint(int i);
-	
+	public abstract void testPrint(int i);
 }
 
 public class LambdaMain02 {
@@ -44,8 +42,8 @@ public class LambdaMain02 {
 			Test2 test3 = new Test2() {
 				
 				@Override
-				public void testPrint() {
-					System.out.println("입력한 숫자는 : " + n);
+				public void testPrint(int i) {
+					System.out.println("입력한 숫자는 : " + i);
 				}
 			};
 			test3.testPrint(100);
@@ -53,8 +51,9 @@ public class LambdaMain02 {
 		// 4. 정수 하나를 입력 받아서 "입력한 숫자는 : 200"을 출력하는
 		//		람다 표현식 생성 및 출력하기
 		Test2 test4 = (n)->{
-			
-		}
+			System.out.println("입력한 숫자는 : " + n);
+		};
+		test4.testPrint(200);
 		
 	} // end main()
 }// end LambdaMain02

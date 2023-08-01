@@ -46,10 +46,3 @@ public class ExceptionMain02 {
 	} // end main()
 
 } // end ExceptionMain02
-
-
-
-
-
-
-
