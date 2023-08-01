@@ -7,7 +7,7 @@ import java.io.OutputStream;
 
 // 프로그램 ===> ObjectOutputStream ===> FileOutputStream ===> 파일(HDD)
 
-public class FileMain04 {
+public class FileMain04 { // 속도를 개선하기 위한 방식 버퍼형식 cpu와 HDD 저장속도 관계 (택배를 동네별로)
 
 	public static void main(String[] args) {
 		OutputStream out = null;

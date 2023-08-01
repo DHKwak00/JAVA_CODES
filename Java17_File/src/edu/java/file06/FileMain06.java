@@ -18,7 +18,7 @@ public class FileMain06 {
 		System.out.println("ArrayList<Member> 객체를 파일에 저장하는 코드");
 		
 		OutputStream out = null;
-		BufferedOutputStream bout = null;
+		BufferedOutputStream bout = null; // 위아래 속도 차를 줄이기 위한 것
 		ObjectOutputStream oout = null;
 		
 		try {
@@ -32,7 +32,7 @@ public class FileMain06 {
 				String id = "member" + i;
 				String pw = "pw" + i;
 				MemberDTO m = new MemberDTO(i, id, pw);
-				list.add(m);
+				list.add(m); // 리스트로 해야 형변환 없이 쓰기 편함
 			}
 			
 			oout.writeObject(list);

@@ -3,7 +3,7 @@ package edu.java.contact03;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ContactMain02 {
+public class ContactMain03 {
 	
 	private static Scanner sc;
 	private static ContactDAO dao;
