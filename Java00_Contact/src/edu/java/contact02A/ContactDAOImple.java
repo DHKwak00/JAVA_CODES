@@ -37,10 +37,10 @@ public class ContactDAOImple implements ContactDAO{
 		return 1;
 	}
 
-	@Override
-	public ContactDTO select() {
-		return list;
-	}
+//	@Override
+//	public ContactDTO select() {
+//		return list;
+//	}
 
 	@Override
 	public ContactDTO select(int index) {
