@@ -50,7 +50,7 @@ public class GuiMain02 {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblOutput = new JLabel("오늘은 수요일입니다.");
+		final JLabel lblOutput = new JLabel("오늘은 수요일입니다.");
 		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOutput.setForeground(new Color(128, 128, 255));
 		lblOutput.setBounds(12, 10, 410, 50);

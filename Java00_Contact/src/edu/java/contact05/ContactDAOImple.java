@@ -1,4 +1,4 @@
-package edu.java.contact04A;
+package edu.java.contact05;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
