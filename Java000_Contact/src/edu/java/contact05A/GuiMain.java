@@ -1,4 +1,4 @@
-package edu.java.contact05;
+package edu.java.contact05A;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -16,7 +16,8 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
+
+import edu.java.contact01.Contact;
 
 public class GuiMain {
 
@@ -117,10 +118,11 @@ public class GuiMain {
 		txtEmail.setBounds(125, 125, 180, 30);
 		frame.getContentPane().add(txtEmail);
 		
-		JButton btnInsert = new JButton("등록");
+		JButton btnInsert = new JButton("등록"); // 메소드화 하자 
 		btnInsert.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				dao = ContactDAOImple.getInstance();
+			public void actionPerformed(ActionEvent e) {				
+				
+				dao = ContactDAOImple.getInstance(); // 싱글톤 사용 어디서 하니까 main 메서드에서 선언해도 좋음
 				
 				String name = txtName.getText();
 				String phone = txtPhone.getText();
@@ -211,9 +213,8 @@ public class GuiMain {
 			public void actionPerformed(ActionEvent e) {
 				dao = ContactDAOImple.getInstance();
 				ArrayList<ContactDTO> list = dao.select();
-				int size = ((ContactDAOImple) dao).getSize(); // 메인 공부 핳시닫ㄷㄷㄷㄷㄷㄷㄷ
-				
-				
+				int size = ((ContactDAOImple) dao).getSize();
+//				txtAreaInfo.setText("");
 				
 				for(int i = 0; i < size; i++) {
 					txtAreaInfo.append("--- 연락처 " + i + " ---" + "\n");
@@ -276,7 +277,6 @@ public class GuiMain {
 		frame.getContentPane().add(scrollList);
 		
 //		scrollList.setViewportView(table);
-		// 마우스로 눌러 수정하는 이벤트
-		// mouseClicked() { table.get~~ }
+		
 	}
 }
