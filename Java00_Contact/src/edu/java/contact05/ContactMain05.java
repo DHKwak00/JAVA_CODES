@@ -31,6 +31,8 @@ public class ContactMain05 {
 	private static ContactDAO dao;
 	private JTable table;
 	private DefaultTableModel model;
+	private String[] header = {"No.", "이름", "전화번호", "이메일"};
+	private Object[] contents = new Object[header.length];
 
 	/**
 	 * Launch the application.
@@ -212,7 +214,7 @@ public class ContactMain05 {
 				dao = ContactDAOImple.getInstance();
 				ArrayList<ContactDTO> list = dao.select();
 				int size = ((ContactDAOImple) dao).getSize(); // 메인 공부 핳시닫ㄷㄷㄷㄷㄷㄷㄷ
-				
+				model.setRowCount(0);
 				
 				
 				for(int i = 0; i < size; i++) {
@@ -263,19 +265,27 @@ public class ContactMain05 {
 		scrollPane_1.setViewportView(txtAreaLog);
 		
 		
-		String header[] = {"No.", "이름", "전화번호", "이메일"};
-		String contents[][]={};
 		
-		model = new DefaultTableModel(contents, header);
-		table = new JTable(model);
-		table.setModel(model);
-		table.setFillsViewportHeight(true); // pane 전체를 테이블로 쓰기 (값이 적어도 테이블 다 사용)
-		JScrollPane scrollList = new JScrollPane(table);
 		
+		JScrollPane scrollList = new JScrollPane();
 		scrollList.setBounds(315, 260, 257, 215);
 		frame.getContentPane().add(scrollList);
 		
-//		scrollList.setViewportView(table);
+		
+		model = new DefaultTableModel(header, 0) {
+			@Override
+			public boolean isCellEditable(int row, int column) {
+				// TODO Auto-generated method stub
+				
+				return false;
+			}
+		};
+		
+		table = new JTable(model);
+		
+//		table.setModel(model);
+//		table.setFillsViewportHeight(true); // pane 전체를 테이블로 쓰기 (값이 적어도 테이블 다 사용)
+		scrollList.setViewportView(table);
 		// 마우스로 눌러 수정하는 이벤트
 		// mouseClicked() { table.get~~ }
 	}

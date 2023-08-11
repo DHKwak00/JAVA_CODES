@@ -24,8 +24,9 @@ public interface OracleQuery{
 		
 		// 연락처 전체 리스트 검색
 		public static final String SQL_SELECT = 
-				"SELECT 8 FROM " + TABLE_NAME + 
-				"ORDER BY " + COL_CONTACT_ID;
+				"SELECT * FROM " + TABLE_NAME + 
+				" ORDER BY " + COL_CONTACT_ID;
+		
 		
 		// 연락처 정보 인덱스 검색
 		public static final String SQL_SELECT_BY_CONTACT_ID = 

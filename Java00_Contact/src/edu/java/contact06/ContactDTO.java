@@ -10,7 +10,7 @@ public class ContactDTO {
 	public ContactDTO() {}
 
 	public ContactDTO(int contactId, String name, String phone, String email) {
-		super();
+		
 		this.contactId = contactId;
 		this.name = name;
 		this.phone = phone;
